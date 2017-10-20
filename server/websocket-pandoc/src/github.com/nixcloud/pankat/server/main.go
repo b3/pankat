@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"./chat"
+	"github.com/nixcloud/pankat/chat"
 )
 
 func main() {
@@ -15,7 +15,8 @@ func main() {
 	go server.Listen()
 
 	// static files
-	http.Handle("/", http.FileServer(http.Dir("webroot")))
+	// FIXME: vm-specific absolute path
+	http.Handle("/", http.FileServer(http.Dir("/root/hostFS/pankat/server/websocket-pandoc/webroot")))
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

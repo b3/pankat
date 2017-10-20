@@ -1,0 +1,4 @@
+#!/bin/sh
+
+nix-build && echo "build successful" && result-bin/bin/server
+

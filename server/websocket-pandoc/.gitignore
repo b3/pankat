@@ -3,3 +3,5 @@
 /activate
 pkg
 src/code.google.com
+result-bin
+.idea
