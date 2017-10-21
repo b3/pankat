@@ -199,5 +199,16 @@
        sha256 =  "12lvdj0k2gww4hw5f79qb9yswqpy4i3bgv1likmf3mllgdxfm20w";
     };
   }
+
+  # FIXME: required for vm-specific hack. remove this in production
+  {
+   goPackagePath =  "github.com/wader/disable_sendfile_vbox_linux";
+    fetch =  {
+     type =  "git";
+     url =  "https://github.com/wader/disable_sendfile_vbox_linux";
+     rev =  "40f6459883cd59fb0265888abe8a65eb5f7bd80a";
+     sha256 =  "0s12yyp5xdn8v4c554v6n1sc7f6dgm7cffsk1dna5zrldpypc05l";
+    };
+  }
 ]
 

@@ -5,6 +5,9 @@ import (
 	"net/http"
 
 	"github.com/nixcloud/pankat/chat"
+
+	// FIXME: vm-specific hack. remove this in production
+	_ "github.com/wader/disable_sendfile_vbox_linux"
 )
 
 func main() {
